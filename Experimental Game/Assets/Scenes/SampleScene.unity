@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 523641066}
   - component: {fileID: 523641065}
   m_Layer: 0
-  m_Name: AnswerManager
+  m_Name: AnswerAndTimerManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -432,10 +432,11 @@ MonoBehaviour:
   answerText: {fileID: 1264581029}
   catagoryText: {fileID: 1269985977}
   skipButton: {fileID: 913913914}
+  continueButton: {fileID: 0}
   scoreText: {fileID: 1536834647}
   strikeText: {fileID: 1767821753}
   timerText: {fileID: 353265548}
-  startingTime: 30
+  startingTime: 10
 --- !u!4 &523641066
 Transform:
   m_ObjectHideFlags: 0

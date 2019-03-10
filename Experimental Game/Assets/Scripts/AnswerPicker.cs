@@ -15,6 +15,9 @@ public class AnswerPicker : MonoBehaviour
     private Button skipButton;
 
     [SerializeField]
+    private Button continueButton;
+
+    [SerializeField]
     private Text scoreText;
 
     [SerializeField]
@@ -68,6 +71,12 @@ public class AnswerPicker : MonoBehaviour
     {
         currentTime -= 1 * Time.deltaTime;
         timerText.text = currentTime.ToString("0.0");
+
+        if (currentTime <= 0)
+        {
+            currentTime = 0;
+            GameOver();
+        }
     }
 
     public void SetCurrentAnswer()
@@ -110,5 +119,13 @@ public class AnswerPicker : MonoBehaviour
         }
 
         SetCurrentAnswer();
+    }
+
+    public void GameOver()
+    {
+        skipButton.enabled = false;
+        continueButton.enabled = false;
+        //catagoryText.IsActive = false;
+        answerText.text = "GAME OVER";
     }
 }
