@@ -20,9 +20,16 @@ public class AnswerPicker : MonoBehaviour
     [SerializeField]
     private Text strikeText;
 
+    [SerializeField]
+    private Text timerText;
+
+    [SerializeField]
+    private float startingTime = 30.2f;
+
     private string answer = "Answer";
     private int numberOfStrikes = 0;
     private int score = 0;
+    private float currentTime = 0.0f;
 
     private string[] danceAnswers = new string[] { "Macarena", "Cupid Shuffle", "Electric Slide", "Cotton Eye Joe", "The Worm", "Soulja Boy", "The Chicken Dance", "Twerking", "The Moon Walk", "Voguing", "The Twist", "Disco", "The YMCA", "Head Banging", "Thriller", "The Robot", "Gangnam Style", "What is Love", "Bye Bye Bye" };
 
@@ -43,6 +50,24 @@ public class AnswerPicker : MonoBehaviour
         SetCurrentAnswer();
         scoreText.text = "0";
         strikeText.text = "";
+
+        SetTimer();
+    }
+
+    private void Update()
+    {
+        RunTimer();
+    }
+
+    private void SetTimer()
+    {
+        currentTime = startingTime;
+    }
+
+    private void RunTimer()
+    {
+        currentTime -= 1 * Time.deltaTime;
+        timerText.text = currentTime.ToString("0.0");
     }
 
     public void SetCurrentAnswer()
@@ -62,6 +87,8 @@ public class AnswerPicker : MonoBehaviour
 
         score++;
         scoreText.text = score.ToString();
+
+        SetTimer();
     }
 
     public void Skip()
