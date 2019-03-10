@@ -11,6 +11,9 @@ public class AnswerPicker : MonoBehaviour
     [SerializeField]
     private Text catagoryText;
 
+    [SerializeField]
+    private Button continueButton;
+
     private string answer = "Answer";
 
     private string[] danceAnswers = new string[] { "Macarena", "Cupid Shuffle", "Electric Slide", "Cotton Eye Joe", "The Worm", "Soulja Boy", "The Chicken Dance", "Twerking", "The Moon Walk", "Voguing", "The Twist", "Disco", "The YMCA", "Head Banging", "Thriller", "The Robot", "Gangnam Style", "What is Love", "Bye Bye Bye" };
@@ -27,7 +30,7 @@ public class AnswerPicker : MonoBehaviour
         return sportAnswers[Random.Range(0, sportAnswers.Length)];
     }
 
-    private void SetCurrentAnswer()
+    public void SetCurrentAnswer()
     {
         if (Random.value < 0.5f)
         {
