@@ -432,11 +432,11 @@ MonoBehaviour:
   answerText: {fileID: 1264581029}
   catagoryText: {fileID: 1269985977}
   skipButton: {fileID: 913913914}
-  continueButton: {fileID: 0}
+  continueButton: {fileID: 1285395853}
   scoreText: {fileID: 1536834647}
   strikeText: {fileID: 1767821753}
   timerText: {fileID: 353265548}
-  startingTime: 10
+  startingTime: 30.5
 --- !u!4 &523641066
 Transform:
   m_ObjectHideFlags: 0
@@ -1087,7 +1087,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: AnswerText
+  m_Text: CatgoryText
 --- !u!222 &1269985978
 CanvasRenderer:
   m_ObjectHideFlags: 0
