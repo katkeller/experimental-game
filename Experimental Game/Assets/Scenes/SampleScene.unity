@@ -436,7 +436,7 @@ MonoBehaviour:
   scoreText: {fileID: 1536834647}
   strikeText: {fileID: 1767821753}
   timerText: {fileID: 353265548}
-  startingTime: 30.5
+  startingTime: 45
 --- !u!4 &523641066
 Transform:
   m_ObjectHideFlags: 0
